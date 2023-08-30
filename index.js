@@ -22,8 +22,11 @@ server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
 
-server.use(express.static('/build'))
+server.use(express.static(__dirname+'/build'))
 
+server.get('/',(req,res)=>{
+  res.sendFile(__dirname+'/static/index.html')
+})
 server.post('/contacts',async(req,res)=>{
     let contact = new Contact();
     contact.name = req.body.name;
