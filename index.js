@@ -4,6 +4,7 @@ const server = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const path = require('path')
 
 main().catch(err => console.log(err));
 
@@ -22,10 +23,10 @@ server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
 
-server.use(express.static(__dirname+'/build'))
+server.use(express.static( path.join(__dirname,'/build')))
 
 server.get('/',(req,res)=>{
-  res.sendFile(__dirname+'/static/index.html')
+  res.sendFile(path.join(__dirname,'/static/index.html'))
 })
 server.post('/contacts',async(req,res)=>{
     let contact = new Contact();
