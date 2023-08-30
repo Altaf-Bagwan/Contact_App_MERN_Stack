@@ -23,7 +23,7 @@ server.use(cors());
 server.use(bodyParser.json());
 server.use(bodyParser.urlencoded());
 
-server.use(express.static(path.join(__dirname,'/build')))
+server.use(express.static(path.join(__dirname,'build')))
 
 server.get('/',(req,res)=>{
   res.sendFile(path.join(__dirname,'index.html'))
