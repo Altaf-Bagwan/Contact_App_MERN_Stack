@@ -26,7 +26,7 @@ server.use(bodyParser.urlencoded());
 server.use(express.static( path.join(__dirname,'/build')))
 
 server.get('/',(req,res)=>{
-  res.sendFile(path.join(__dirname,'/static/index.html'))
+  res.sendFile(path.join(__dirname,'/build/index.html'))
 })
 server.post('/contacts',async(req,res)=>{
     let contact = new Contact();
