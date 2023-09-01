@@ -1,5 +1,5 @@
 ## Contact_App_MERN_Stack
- I make a fully Responsive Contact App using MERNcwhich performs all CRUD operations  
+ I make a fully Responsive Contact App using MERN which performs all CRUD operations  
 
 ## Try It Out
  Experience the magic of Contact App by visiting the website:  https://contact-app-l1nz.onrender.com/
